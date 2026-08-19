@@ -1,0 +1,276 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Fredoka', sans-serif;
+  color: #000;
+  background: #ffde59;
+  overflow-x: hidden;
+}
+
+/* Comic Book Dot Background */
+.comic-bg {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(#ff914d 20%, transparent 20%), radial-gradient(#ff5757 20%, transparent 20%);
+  background-color: #ffde59;
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  opacity: 0.6;
+  z-index: -2;
+}
+
+.page { width: min(860px, 92%); margin: auto; padding: 40px 0 28px; }
+
+/* Floating Comic Pops */
+.floating-pop {
+  position: fixed;
+  font-family: 'Bangers', cursive;
+  font-size: 32px;
+  color: #ff3131;
+  text-shadow: 3px 3px 0 #000, -2px -2px 0 #fff;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.8;
+  animation: floatPop 4s ease-in-out infinite alternate;
+}
+.pop-1 { top: 12%; left: 4%; transform: rotate(-12deg); }
+.pop-2 { top: 40%; right: 4%; transform: rotate(15deg); color: #00c2cb; }
+.pop-3 { bottom: 15%; left: 5%; transform: rotate(-8deg); color: #ff914d; }
+
+@keyframes floatPop {
+  0% { transform: translateY(0px) rotate(-10deg) scale(1); }
+  100% { transform: translateY(-15px) rotate(-5deg) scale(1.1); }
+}
+
+/* Comic Pop Cards */
+.comic-card {
+  background: #ffffff;
+  border: 5px solid #000000;
+  box-shadow: 12px 12px 0px #000000;
+  border-radius: 28px;
+  padding: 40px 28px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.comic-badge {
+  display: inline-block;
+  background: #ff3131;
+  color: #fff;
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  padding: 6px 18px;
+  border: 3px solid #000;
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 #000;
+  letter-spacing: 1px;
+}
+
+.comic-title {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(48px, 9vw, 84px);
+  line-height: 0.95;
+  margin: 18px 0 10px;
+  color: #ff3131;
+  text-shadow: 5px 5px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+  letter-spacing: 2px;
+}
+.yellow-stroke {
+  color: #ffde59;
+  text-shadow: 5px 5px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+
+.nickname-tag {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.kaalu-badge {
+  background: #00c2cb;
+  color: #fff;
+  padding: 4px 14px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #000;
+  display: inline-block;
+  transform: rotate(-3deg);
+}
+
+.comic-intro {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 20px auto;
+  font-weight: 500;
+}
+
+/* Cartoon Photo Frame */
+.cartoon-frame-wrap { display: flex; justify-content: center; margin: 25px 0; }
+.cartoon-frame {
+  position: relative;
+  background: #ffde59;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 #000;
+  padding: 15px 15px 25px;
+  border-radius: 20px;
+  max-width: 330px;
+  width: 100%;
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+.cartoon-frame:hover { transform: rotate(0deg) scale(1.04); }
+
+.hero-star {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #ff3131;
+  color: #fff;
+  font-family: 'Bangers', cursive;
+  padding: 6px 12px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 #000;
+  transform: rotate(10deg);
+  font-size: 14px;
+  z-index: 2;
+}
+
+.comic-photo {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 3px solid #000;
+  border-radius: 12px;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 12px;
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* Comic Action Buttons */
+.button-box { margin-top: 25px; }
+.comic-btn {
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  letter-spacing: 1px;
+  background: #ff3131;
+  color: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  padding: 14px 32px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.comic-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px #000000;
+  background: #ff5757;
+}
+.comic-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.hint { font-size: 13px; font-weight: 700; opacity: 0.7; margin-top: 10px; }
+
+/* Secret Section */
+.hidden { display: none; }
+.comic-header h2 {
+  font-family: 'Bangers', cursive;
+  font-size: 38px;
+  color: #00c2cb;
+  text-shadow: 3px 3px 0 #000;
+  margin: 0 0 15px;
+}
+
+.comic-quote {
+  background: #ffde59;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  border-radius: 18px;
+  padding: 18px;
+  font-size: 19px;
+  font-weight: 700;
+  max-width: 640px;
+  margin: 0 auto 20px;
+}
+
+.story-text { font-size: 17px; line-height: 1.7; max-width: 640px; margin: 15px auto; }
+
+/* Soundboard Buttons */
+.comic-soundboard { margin: 25px 0; }
+.comic-soundboard h3 { font-family: 'Bangers', cursive; font-size: 22px; margin-bottom: 12px; }
+.btn-grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.sound-chip {
+  background: #fff;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sound-chip:hover { background: #00c2cb; color: #fff; transform: translateY(-3px); }
+
+/* Sub Memory Card */
+.cartoon-subcard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8fafc;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  border-radius: 18px;
+  padding: 14px;
+  max-width: 600px;
+  margin: 25px auto;
+  text-align: left;
+}
+.mini-frame { width: 110px; height: 100px; flex-shrink: 0; border: 3px solid #000; border-radius: 12px; overflow: hidden; }
+.mini-frame img { width: 100%; height: 100%; object-fit: cover; }
+.subcard-text strong { display: block; font-size: 16px; color: #ff3131; font-weight: 700; }
+.subcard-text span { font-size: 13px; color: #334155; font-weight: 500; line-height: 1.5; display: block; margin-top: 4px; }
+
+.final-wish { font-size: 18px; font-weight: 700; margin-top: 20px; }
+.footer-tag { font-family: 'Bangers', cursive; font-size: 22px; color: #00c2cb; text-shadow: 2px 2px 0 #000; margin-top: 15px; }
+
+/* Music Button */
+.music-btn {
+  position: fixed; right: 22px; bottom: 22px; width: 54px; height: 54px;
+  border-radius: 50%; border: 4px solid #000;
+  background: #ff3131; color: #fff; font-size: 22px;
+  cursor: pointer; box-shadow: 5px 5px 0 #000; z-index: 20;
+}
+.music-btn.playing { background: #00c2cb; animation: spin 3s linear infinite; }
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.comic-particle {
+  position: fixed; pointer-events: none; z-index: 100;
+  font-family: 'Bangers', cursive;
+  font-size: 24px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+footer { text-align: center; font-size: 13px; font-weight: 700; padding: 20px 0; }
+
+@media (max-width: 600px) {
+  .comic-card { padding: 30px 18px; }
+  .cartoon-subcard { flex-direction: column; text-align: center; }
+  .mini-frame { width: 100%; height: 140px; }
+}
