@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Hridyansh's Birthday Mission! 🎈🏼</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky-bg"></div>
+
+  <!-- Floating Balloons and Stars -->
+  <div class="floating-item item-1">🎈</div>
+  <div class="floating-item item-2">⭐</div>
+  <div class="floating-item item-3">🚀</div>
+  <div class="floating-item item-4">🎁</div>
+
+  <main class="page">
+    <!-- Kid Hero Panel -->
+    <section class="card hero-card">
+      <div class="badge">👑 SUPER COUSIN BROTHER 👑</div>
+
+      <h1 class="title">
+        HAPPY BIRTHDAY<br>
+        <span class="highlight">HRIDYANSH!</span>
+      </h1>
+
+      <div class="nickname">
+        aka <span class="kaalu-tag">Little Kaalu ⚡</span>
+      </div>
+
+      <!-- Cartoon Photo Frame -->
+      <div class="frame-container">
+        <div class="photo-frame">
+          <div class="cape-tag">🦸‍♂️ SUPERHERO</div>
+          <img src="hridyansh1.jpeg" alt="Little Hridyansh Photo" class="kid-photo" onerror="this.src='https://via.placeholder.com/400x400/ffbd59/000000?text=Add+hridyansh1.jpeg'">
+          <div class="speech-bubble">"I am 1 year older & cooler today!" 😎</div>
+        </div>
+      </div>
+
+      <p class="intro-text">
+        Welcome to your official Super-Birthday Zone, <strong>Kaalu!</strong> Get ready for cake, gifts, games, and infinite fun today!
+      </p>
+
+      <!-- Interactive Blow Candle Game -->
+      <div class="cake-zone" id="cakeZone">
+        <div class="candle">
+          <div class="flame" id="flame"></div>
+        </div>
+        <div class="cake-emoji">🎂</div>
+        <p class="cake-text" id="cakeText">👆 TAP THE FLAME TO BLOW OUT YOUR CANDLE!</p>
+      </div>
+
+      <button id="giftBtn" class="big-btn">
+        🎁 OPEN YOUR BIRTHDAY SURPRISE!
+      </button>
+    </section>
+
+    <!-- Kid Surprise Secret Section -->
+    <section id="surpriseSection" class="card hidden">
+      <h2>🎉 LEVEL COMPLETE! 🎉</h2>
+
+      <div class="quote-box">
+        "To my super cute younger brother Kaalu—you make every game and day 100 times more fun!" 🎮🎈
+      </div>
+
+      <p class="wish-p">
+        Dear Hridyansh, may your birthday be full of your favorite chocolates 🍫, giant toy cars 🏎️, yummy ice cream 🍦, and lots of presents!
+      </p>
+
+      <!-- Fun Toy Soundboard -->
+      <div class="toy-box">
+        <h3>🚀 TAP FOR YOUR SUPER POWERS:</h3>
+        <div class="toy-grid">
+          <button class="toy-btn" onclick="playPower('car')">🏎️ Super Speed Car</button>
+          <button class="toy-btn" onclick="playPower('dino')">🦖 Dino Roar!</button>
+          <button class="toy-btn" onclick="playPower('magic')">✨ Magic Wand</button>
+          <button class="toy-btn" onclick="playPower('cake')">🍰 Double Chocolate</button>
+        </div>
+      </div>
+
+      <!-- Second Photo Memory -->
+      <div class="sub-frame">
+        <div class="mini-photo-wrap">
+          <img src="hridyansh2.jpeg" alt="Hridyansh Photo 2" onerror="this.src='https://via.placeholder.com/300x300/ff5757/ffffff?text=Add+hridyansh2.jpeg'">
+        </div>
+        <div class="sub-text">
+          <strong>Best Cousin Brother Ever! 🏆</strong>
+          <span>Always stay happy, keep smiling, and play big today!</span>
+        </div>
+      </div>
+
+      <p class="final-cheer">Have the best birthday ever, Kaalu! 🚀🎈✨</p>
+
+      <button id="blastBtn" class="big-btn secondary">💥 BLAST CONFETTI POPPERS!</button>
+    </section>
+
+    <footer>Made with lots of love for my superhero brother, Hridyansh! 🎈</footer>
+  </main>
+
+  <button id="musicBtn" class="music-btn" aria-label="Play Music">🎵</button>
+  <audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
